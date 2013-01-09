@@ -1,0 +1,119 @@
+/*
+Style Sheet for lexkarate.com
+Designed by Whiteliphant (Laura Alejandra Mercado Araujo)
+Coded by Andy Osuna (Andrea Gonzalez Osuna)
+December the 16th of 2012
+*/
+
+/*
+
+GENERAL SYLES
+
+*/
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	margin:0;
+	padding:0;
+	font-family:"Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+}
+a{
+	color:#999;
+	text-decoration:none;
+}
+a:hover, a:focus{
+	color:#00BFFF;
+}
+label,input,textarea{
+	display:block;
+}
+.pull-left{
+	float:left;
+}
+.pull-right{
+	float:right;
+}
+.clear-all{
+	clear:both;
+}
+
+/*
+
+HEADER STYLES
+
+*/
+.header{
+	width:960px;
+	margin:0 auto;
+	padding:10px;
+	height:150px;
+}
+.header address{
+	text-align: right;
+}
+
+/*
+
+NAV STYLES
+
+*/
+.nav{
+	background-color: #000;
+	font-size: 18px
+}
+.nav ul{
+	width:960px;
+	margin:0 auto;
+	padding: 10px;
+}
+.nav ul li{
+	display:inline;
+	text-decoration: none;
+}
+.nav ul li a{
+	padding:10px 15px;
+	border-right:1px solid #999;
+}
+.nav ul li a.last-item{
+	border:none;
+}
+.nav ul li a#current{
+	background-color:#FFF;
+	color:#000;
+}
+
+/*
+
+CONTENT STYLES
+
+*/
+.content{
+	width:960px;
+	margin:0 auto;
+	padding:10px;
+	min-height: 800px
+}
+.slides{
+	display:block;
+	width:620px;
+}
+
+/*CONTACT FORM*/
+.contact-form{
+	margin-left:640px;
+	background-color:#000;
+	color:#FFF;
+	padding:20px;
+	font-style:bold;
+	font-size:16px;
+}
+.contact-form label,
+.contact-form input{
+	display:inline-block;
+}
+.contact-form label{
+	width:90px;
+	float:left;
+}
