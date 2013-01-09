@@ -6,8 +6,8 @@ based on work by Remy Sharp: http://jqueryfordesigners.com/
 */
 
 #slider {
-	width: 620px;
-	height: 350px;
+	width: 600px;
+	height: 335px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
 	overflow-y: auto;
@@ -20,10 +20,11 @@ based on work by Remy Sharp: http://jqueryfordesigners.com/
 	border-radius: 11px 11px 11px 11px;
 	-moz-border-radius: 11px 11px 11px 11px;
 	-webkit-border-radius: 11px 11px 11px 11px;
+	visibility: hidden;
 }
 /* Make sure navigation text is visible */
 .anythingSlider-default .anythingControls a span {
-	visibility: visible;
+	visibility: hidden;
 }
 /* Navigation current button, default state */
 .anythingSlider-default .anythingControls a.cur {

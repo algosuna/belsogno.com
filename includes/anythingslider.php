@@ -9,5 +9,12 @@ $(function(){
 		autoPlay:true,
 		enableArrows:true,
 	});
+	/*
+	$('#reviews').anythingSlider({
+		buildStartStop:false,
+		autoPlay:true,
+		enableArrows:false,
+	});
+	*/
 });
 </script>

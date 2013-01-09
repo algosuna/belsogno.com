@@ -7,16 +7,20 @@
 </head>
 
 <body>
+	<?php include 'includes/header.php'; ?>
+	<?php include 'includes/nav.php'; ?>
 
-	<?php include 'includes/header.php';?>
+	<div class="container">
+		<?php include 'includes/breadcrumbs.php'; ?>
 
-	<div class="clear-all"></div>
+		<div class="content">
+			<!--CONTENT GOES HERE-->
+		</div>
 
-	<?php include 'includes/nav.php';?>
+		<?php include 'includes/aside.php'; ?>	
 
-	<div class="content">
-		<!--CONTENT HERE-->
 	</div>
 
+	<?php include 'includes/footer.php'; ?>
 </body>
 </html>
