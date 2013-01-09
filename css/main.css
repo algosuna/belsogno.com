@@ -1,7 +1,6 @@
 /*
-Style Sheet for lexkarate.com
-Designed by Whiteliphant (Laura Alejandra Mercado Araujo)
-Coded by Andy Osuna (Andrea Gonzalez Osuna)
+Style Sheet for Bel Sogno
+Designed and Coded by Andy Osuna (@andiosuna)
 December the 16th of 2012
 */
 
@@ -17,7 +16,6 @@ GENERAL SYLES
 body{
 	margin:0;
 	padding:0;
-	font-family:"Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
 }
 a{
 	color:#999;
