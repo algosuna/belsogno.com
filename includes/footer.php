@@ -1,4 +1,6 @@
-<div class="container">
+<div class="container" <?php if($home!=0 OR $home!=null){echo "align='center'";}?>>
+	
+
 	<iframe src="http://rcm.amazon.com/e/cm?t=vidgamhis-20&o=1&p=48&l=ur1&category=gourmet&banner=0DSWRZ5A2FXV23WJNK02&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 </div>
 

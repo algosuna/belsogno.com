@@ -14,27 +14,21 @@
 		<?php include 'includes/breadcrumbs.php'; ?>
 
 		<div class="content clear">
-			<form action="contact.php" method="post" class="contact" name="contact">
-				<?php
-				if($valid==true){
-					if($mail_sent==1){
-						echo $success;
-					}else{
-						echo $db_error;
-					}
-				}else{
-				?>
-				<label for="name">Name:</label>
-				<input type="text" name="name" id="name" value="<?php if($valid==false)echo$name?>" placeholder="Your Name" />
-				<?php if($valid==false AND strlen($name)==0)echo$blank_error?>
+			<form action="" method="post" class="contact" name="contact">
+				<legend><small>Fields marked with <sup class="red">*</sup> are required</small></legend>
+				<label>Name:</label>
+				<input type="text" class="shadow-inset" />
 
-				<label for="email">Email:</label>
-				<input type="text" name="email" id="email" value="<?php if($valid==false)echo$email?>" placeholder="Your Email" />
-				<?php if($valid==false AND check_email_address($email)==false)echo$email_error?>
+				<label>Phone:</label>
+				<input type="text" class="shadow-inset" />
 
-				<?php
-				}			
-				?>
+				<label>Email:</label>
+				<input type="text" class="shadow-inset" />
+
+				<label>Message:</label>
+				<textarea class="shadow-inset"></textarea>
+
+				<button type="submit" class="btn btn-green clear">Send!</button>
 			</form>
 		</div>
 
