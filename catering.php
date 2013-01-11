@@ -1,8 +1,8 @@
-<?php $THISPAGE='id="current"';$current='THISPAGE';?>
+<?php $catering='id="current"';$current='catering';?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title><!--TITLE--> | Bel Sogno | Your Online Wedding Planner | Catering &amp; Party Rentals for the Greater Los Angeles Area</title>
+	<title>Catering Services | Bel Sogno | Your Online Wedding Planner | Catering &amp; Party Rentals for the Greater Los Angeles Area</title>
 	<?php include 'includes/css.php';?>
 </head>
 

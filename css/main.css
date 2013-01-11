@@ -32,6 +32,9 @@ a:hover,a:focus{
 	color:#73dbe6;
 	text-decoration:underline;
 }
+a:focus{
+	outline:1px dashed #9e9e9e;
+}
 a:active{
 	color:#5e5e5e;
 }
@@ -53,7 +56,7 @@ figure{
 	width:300px;
 }
 figcaption{
-	margin-top:10px;
+	padding-top:10px;
 }
 aside{
 	display:block;
@@ -121,7 +124,6 @@ aside{
 	display:inline-block;
 	font-size:14px;
 	line-height:20px;
-	margin-bottom:0;
 	padding:4px 12px;
 	text-align:center;
 	vertical-align:middle;
@@ -131,6 +133,9 @@ aside{
 .btn:hover{
 	background-image:-webkit-linear-gradient(top, #E6E6E6, #E6E6E6);
 
+}
+.btn:focus{
+	outline:1px dashed #9e9e9e;
 }
 .btn-blue{
 	background-color:#49AFCD;
@@ -181,9 +186,15 @@ HEADER STYLES
 header{
 	background-image:url(../images/header-bg.png);
 }
-header address{
-	text-align: right;
+.social{}
+header .pull-right{
+	text-align:right;
 	font-size:18px;
+}
+header .pull-right span{
+	font-size:16px;
+	position:relative;
+	top:-10px;
 }
 
 /*
@@ -202,12 +213,11 @@ NAV STYLES
 	text-decoration: none;
 }
 .nav ul li a{
-	padding:10px 15px;
+	padding:8px 15px;
 }
 .nav ul li a#current{
+	background-color:#212121;
 	color:#cecece;
-	text-shadow: 0px 0px 7px #73dbe6;
-	filter: dropshadow(color=#73dbe6, offx=0, offy=0);
 }
 
 /*
@@ -217,7 +227,6 @@ CONTENT STYLES
 */
 
 .content{
-	min-height:400px;
 	width:620px;
 	float:left;
 }
@@ -244,19 +253,16 @@ CONTENT STYLES
 .contact-form textarea{
 	border:1px #9e9e9e;
 	margin:5px 0 10px 0;
-	width:260px;
+	width:250px;
+	padding:5px;
 }
 .contact-form input{
-	height:25px;
 }
 .contact-form textarea{
-	min-height:100px;
+	min-height:36px;
 }
 .contact-form legend{
 	margin-left:20px;
-}
-.contact-form button{
-	margin-top:10px;
 }
 .quick-links{
 	padding:20px 0 20px 0;
@@ -270,21 +276,73 @@ CONTENT STYLES
 .quick-links .link .btn{
 	display:block;
 	float:right;
+	margin-bottom:20px;
 }
+.link-button img{
+	margin:10px 0 10px 0;
+}
+.link-button img:hover{
+	-webkit-box-shadow:0px 0px 5px 0px#73dbe6;
+	box-shadow:0px 0px 5px 0px#73dbe6;
+
+}
+
+
 /*
 
 FOOTER STYLES
 
 */
 
+/*STICKY FOOTER*/
+html, body{
+	height:100%;
+}
+.wrapper{
+	min-height:100%;
+} /*
+.content{
+	overflow:auto;
+	padding-bottom: 200px;}  must be same height as the footer */
 footer{
+	position:relative;
+	margin-top:-200px;/* negative value of footer height */
+	height:200px;
+	clear:both;
+} 
+/*Opera Fix*/
+body:before {
+	content:"";height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
+}
+/*STICKY FOOTER*/
 
-}
-footer .pull-right{
-	text-align: right;
-	color:#9e9e9e;
-	font-size:16px;
-}
 footer .pull-left{
 	color:#cecece;
+}
+footer ul.pull-left{
+	margin-left:30px;
+}
+footer ul li{
+	list-style:none;
+	font-weight:400;
+	padding:10px 0px 0px 0px;
+}
+footer ul li ul{
+	margin-left:15px;
+}
+footer ul li ul li{
+	font-weight:300;
+	padding:3px 0px 0px 0px;
+}
+footer .pull-right{
+	text-align:right;
+	color:#9e9e9e;
+	font-size:16px;
+	padding-top:10px;
+}
+footer .copy{
+	padding-top:70px;
 }

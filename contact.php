@@ -1,4 +1,4 @@
-<?php require 'db/validate.php'; $contact='id="current"';?>
+<?php require 'db/validate.php'; $contact='id="current"';$current='contact'?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,33 +7,37 @@
 </head>
 
 <body>
-	<?php include 'includes/header.php'; ?>
-	<?php include 'includes/nav.php'; ?>
+	<div class="wrapper">
+		<?php include 'includes/header.php'; ?>
+		<?php include 'includes/nav.php'; ?>
 
-	<div class="container clear">
-		<?php include 'includes/breadcrumbs.php'; ?>
+		<div class="container">
+			<?php include 'includes/breadcrumbs.php'; ?>
 
-		<div class="content clear">
-			<form action="" method="post" class="contact" name="contact">
-				<legend><small>Fields marked with <sup class="red">*</sup> are required</small></legend>
-				<label>Name:</label>
-				<input type="text" class="shadow-inset" />
+			<div class="content">
 
-				<label>Phone:</label>
-				<input type="text" class="shadow-inset" />
+				<div class="well shadow">
+					<form action="" method="post" class="contact" name="contact">
+						<legend><small>Fields marked with <sup class="red">*</sup> are required</small></legend>
+						<label>Name:</label>
+						<input type="text" class="shadow-inset" />
 
-				<label>Email:</label>
-				<input type="text" class="shadow-inset" />
+						<label>Phone:</label>
+						<input type="text" class="shadow-inset" />
 
-				<label>Message:</label>
-				<textarea class="shadow-inset"></textarea>
+						<label>Email:</label>
+						<input type="text" class="shadow-inset" />
 
-				<button type="submit" class="btn btn-green clear">Send!</button>
-			</form>
+						<label>Message:</label>
+						<textarea class="shadow-inset"></textarea>
+
+						<button type="submit" class="btn btn-green clear">Send!</button>
+					</form>
+				</div>
+			</div>
+
+			<?php include 'includes/aside.php'; ?>
 		</div>
-
-		<?php include 'includes/aside.php'; ?>	
-
 	</div>
 
 	<?php include 'includes/footer.php'; ?>
