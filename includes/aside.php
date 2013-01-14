@@ -1,3 +1,5 @@
 <aside class="clear">
-
+<?php if($current=='catering'||$current=='rentals'){ ?>
+	<iframe class="shadow" width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?q=7236+Pacific+Boulevard+Walnut+Park,+California+90255&amp;ie=UTF8&amp;hq=&amp;hnear=7236+Pacific+Blvd,+Walnut+Park,+California+90255&amp;t=m&amp;ll=33.981232,-118.227568&amp;spn=0.021352,0.025749&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/?q=7236+Pacific+Boulevard+Walnut+Park,+California+90255&amp;ie=UTF8&amp;hq=&amp;hnear=7236+Pacific+Blvd,+Walnut+Park,+California+90255&amp;t=m&amp;ll=33.981232,-118.227568&amp;spn=0.021352,0.025749&amp;z=14&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+<?php } ?>
 </aside>

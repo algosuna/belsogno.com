@@ -17,7 +17,8 @@
 			<!--ANYTHING SLIDER-->
 			<div class="slides pull-left shadow polaroid">
 				<ul id="slider">
-					<li><img src="images/slides/1.jpg" alt=""></li>
+					<li><img src="images/slides/1.jpg" alt="Honeymoon Ideas"></li>
+					<li><img src="images/slides/2.jpg" alt="Catering Services"></li>
 				</ul>
 				<!--
 				<ul id="reviews">
@@ -56,7 +57,7 @@
 							Until January 31st, receive an additional 10% off chairs when presenting the print ad!
 						</figcaption>
 					</figure>
-					<button class="btn btn-blue">View Ad</button>
+					<button class="btn btn-lblue">View Ad</button>
 				</div>
 				
 				<div class="link pull-left">
@@ -67,7 +68,7 @@
 							Looking for the best honeymoon? Learn everything you need to know for the most memorable honeymoon. From weather to packing ckecklist!
 						</figcaption>
 					</figure>
-					<button class="btn btn-blue">View Article</button>
+					<button class="btn btn-lblue">View Article</button>
 				</div>
 				
 				<div class="link pull-right">
@@ -79,7 +80,7 @@
 				
 						</figcaption>
 					</figure>
-					<button class="btn btn-blue">View List</button>
+					<button class="btn btn-lblue">View List</button>
 				</div>
 
 			</div>

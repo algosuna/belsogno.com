@@ -1,4 +1,4 @@
-<?php $rentals='id="current"';$current='rentals';?>
+<?php $services='id="current"';$current='rentals';?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +6,7 @@
 	<?php include 'includes/css.php';?>
 </head>
 
-<body>
+<body id="rentals">
 	<div class="wrapper">
 		<?php include 'includes/header.php'; ?>
 		<?php include 'includes/nav.php'; ?>
@@ -15,8 +15,25 @@
 			<?php include 'includes/breadcrumbs.php'; ?>
 
 			<div class="content">
-				<!--CONTENT GOES HERE-->
-			</div>
+				
+				<h2>Rentals <small>Great selection of chairs and tables!</small></h2>
+				<p>We at Bel Sogno have a varied selection of quality chairs and tables. Take a quick look at our inventory and fill out a <a href="contact.php?ref=rentals">contact form</a>.</p>
+				
+				<?php
+		            $view=$_GET['view'];
+		            switch($view){
+		                case 'folding':
+		                    include('folding.php');
+		                break;
+						case 'stools':
+							include('stools.php');
+						break;
+		                default:
+		                    include('rental-main.php');
+		            }
+		        ?>
+
+  			</div>
 
 			<?php include 'includes/aside.php'; ?>	
 

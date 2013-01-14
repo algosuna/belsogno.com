@@ -1,6 +1,6 @@
 <div class="breadcrumbs">
 <?php
-	$dA='id="disabled"';
+	$dA='id="now"';
 	if($current=='contact'){
 		?>
 		<a href="index.php">Home</a> > <a href="contact.php" <?php echo $dA;?>>Contact</a>
