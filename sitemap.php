@@ -1,8 +1,8 @@
-<?php $THISPAGE='id="current"';$current='THISPAGE';?>
+<?php $sitemap='id="current"';$current='sitemap';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title><!--TITLE--> | Bel Sogno | Your Online Wedding Planner | Catering &amp; Party Rentals for the Greater Los Angeles Area</title>
+	<title>Sitemap for Bel Sogno | Bel Sogno | Your Online Wedding Planner | Catering &amp; Party Rentals for the Greater Los Angeles Area</title>
 	<?php include 'includes/css.php';?>
 </head>
 
@@ -15,7 +15,6 @@
 			<?php include 'includes/breadcrumbs.php'; ?>
 
 			<div class="content">
-				<!--CONTENT GOES HERE-->
 			</div>
 
 			<?php include 'includes/aside.php'; ?>	

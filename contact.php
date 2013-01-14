@@ -17,13 +17,28 @@ if($_GET['item']=='folding'){
 }
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 	<title>Contact Us | Bel Sogno | Your Online Wedding Planner | Catering &amp; Party Rentals for the Greater Los Angeles Area</title>
 	<?php include 'includes/css.php';?>
+	<script type="text/javascript">
+	function fieldCheck(){
+		var name=document.getElementById("name").value;
+		var email=document.getElementById("email").value;
+		var message=document.getElementById("message").innerHTML;
+		if(name==""){
+			document.getElementById("name").focus();
+		}else if(email==""){
+			document.getElementById("email").focus();
+		}else if(email.indexOf("@")==-1){
+			document.getElementById("email").value="";
+			document.getElementById("email").focus();
+		}
+	}
+	</script>
 </head>
 
-<body>
+<body onload="fieldCheck();">
 	<div class="wrapper">
 		<?php include 'includes/header.php'; ?>
 		<?php include 'includes/nav.php'; ?>
@@ -37,22 +52,45 @@ if($_GET['item']=='folding'){
 				<p>Fill out this form and we will get back to you shortly.</p>
 
 				<div class="well shadow">
-					<form action="" method="post" class="contact" name="contact">
+					<?php 
+					if($valid==true){
+						if($mail_sent==1){
+							echo $success;
+						}else{
+							echo $db_error;
+						}
+					}else{ ?>
+
+					<form action="contact.php" method="post" class="contact" name="contact">
 						<legend>Fields marked with <sup class="red">*</sup> are required</legend>
-						<label class="pull-left first">Name:</label>
-						<input type="text" class="shadow-inset" name="name" id="name" />
+
+						<label class="pull-left first">Name: <sup class="red">*</sup></label>
+						<input type="text" class="shadow-inset" name="name" id="name" value="<?php if($valid==false)echo $name;?>" />
+						<?php if($valid===false AND strlen($name)==0)echo $blank_error;?>
 
 						<label class="pull-left">Phone:</label>
-						<input type="text" class="shadow-inset" name="phone" id="phone" />
+						<input type="text" class="shadow-inset" name="phone" id="phone" value="<?php if($valid==false)echo $phone;?>" />
+						
 
-						<label class="pull-left">Email:</label>
-						<input type="text" class="shadow-inset" name="email" id="email" />
+						<label class="pull-left">Email: <sup class="red">*</sup></label>
+						<input type="text" class="shadow-inset" name="email" id="email" value="<?php if ($valid==false)echo $email;?>" />
+						<?php
+						if($valid===false AND strlen($email)==0){
+							echo $blank_error;
+						}elseif(check_email_address($email)==false){
+							echo $email_error;
+						}?>
 
-						<label class="pull-left">Message:</label>
-						<textarea class="shadow-inset" name="message" id="message"><?php echo $preset_message; ?></textarea>
+						<label class="pull-left">Message: <sup class="red">*</sup></label>
+						<textarea class="shadow-inset" name="message" id="message"><?php echo $preset_message;if($valid==false)echo $message ?></textarea>
+						<?php if($valid===false AND strlen($message)==0)echo $blank_error;?>
 
 						<button type="submit" class="btn btn-green clear">Send!</button>
+						<input type="hidden" name="did_send" value="true" />
 					</form>
+
+					<?php } ?>
+
 				</div>
 
 				<h2>Find Us! <small>Are you in the Greater Los Angeles area?</small></h2>

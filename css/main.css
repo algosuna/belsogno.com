@@ -63,6 +63,12 @@ BREADCRUMBS
 }
 /*
 
+ASIDE
+
+*/
+
+/*
+
 CONTENT STYLES
 
 */
@@ -90,6 +96,7 @@ CONTENT STYLES
 	padding:10px 20px 20px;
 	font-style:bold;
 	font-size:16px;
+	min-height:330px;
 }
 .contact-form legend{
   text-align:center;
@@ -99,15 +106,23 @@ CONTENT STYLES
   color:#cecece;
   margin:0px 0px 0px 15px;
 }
+.contact-form label{
+	margin:10px 0 5px 0;
+}
 .contact-form input,
 .contact-form textarea{
 	border:1px #9e9e9e;
-	margin:5px 0 10px 0;
 	width:250px;
 	padding:5px;
 }
 .contact-form textarea{
 	min-height:36px;
+}
+.contact-form button{
+	margin-top: 5px;
+}
+.contact-form .help-label{
+	margin-top:5px;
 }
 .quick-links{
 	padding:20px 0 20px 0;
@@ -158,6 +173,21 @@ CONTENT STYLES
 #rentals figure.last-of-row{
 	margin-right:0px;
 }
+/*ABOUT*/
+#about figure{
+	display:block;
+	float:left;
+	margin:10px;
+	padding:4px;
+	width:132px;
+	height:250px;
+}
+#about figure.last-of-row{
+	margin-right:0px;
+}
+#about figure.first-of-row{
+	margin-left:0px;
+}
 /*CONTACT PAGE*/
 .contact{
 	padding-left:40px;
@@ -173,15 +203,20 @@ CONTENT STYLES
 .contact input,
 .contact textarea{
 	display:block;
-	width:260px;
+	width:240px;
 	margin-top:15px;
+	padding:5px 10px;
 }
 .contact textarea{
-	height:80px;
+	height:70px;
 }
 .contact button{
 	margin-left:300px;
 	margin-top:10px;
+}
+.contact .help-label{
+	display:block;
+	margin-left:100px;
 }
 /*
 

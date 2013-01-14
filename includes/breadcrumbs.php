@@ -33,6 +33,10 @@
 		?>
 		<a href="index.php">Home</a> > <a href="services.php">Our Services</a> > <a href="rentals.php" <?php echo $dA;?>>Rentals</a>
 		<?php
+	}elseif ($current=='specials'){
+		?>
+		<a href="index.php">Home</a> > <a href="specials.php" <?php echo $dA;?>>Monthly Specials</a>
+		<?php
 	}
 
 ?>

@@ -1,6 +1,4 @@
 <?php
-session_start();
-require('db_config.php');
 require_once('functions.php');
 
   ///////////////////
@@ -9,8 +7,8 @@ require_once('functions.php');
 
 if($_POST['did_send']=='true'){
 	$name=clean_input($_POST['name']);
-	$email=clean_input($_POST['email']);
 	$phone=clean_input($_POST['phone']);
+	$email=clean_input($_POST['email']);
 	$message=clean_input($_POST['message']);
 	
 	$to='info@andyosuna.com';
@@ -29,18 +27,22 @@ if($_POST['did_send']=='true'){
 	
 	if(strlen($name)==0 OR strlen($message)==0){
 		$valid=false;
-		$blank_error="<div class='error'>Please don't leave this blank.</div>";
+		$blank_error="<div class='red help-label'>Please don't leave this blank.</div>";
 	}
-	if(check_email_address($email)==false){
+	if(strlen($email)==0){
 		$valid=false;
-		$email_error="<div class='warning'>Please provide a valid email</div>";
+		$blank_error="<div class='red help-label'>Please don't leave this blank.</div>";		
+	}elseif(check_email_address($email)==false){
+		$valid=false;
+		$email_error="<div class='yellow help-label'>Please provide a valid email</div>";
 	}
+
 	if($valid==true){
 		$mail_sent=mail($to,$subject,$body,$headers);
 		if($mail_sent==1){
-			$success="<div class='success'>Thank you for contacting us! We will get back to you shortly.</div>";
+			$success="<div class='green help-label'>Thank you for contacting us, ".$name."! We will get back to you shortly.</div>";
 		}else{
-			$db_error="<div class='error'>Sorry, something went wrong. Your message was not sent. Please take a moment to inform the <a href='mailto:support@belsogno.com'>Webmaster</a> of this error!</div>";
+			$db_error="<div class='red help-label'><strong>Sorry, something went wrong.</strong> Your message was not sent. Please take a moment to inform the <a href='mailto:support@andyosuna.com'>Webmaster</a> of this error!</div>";
 		}
 	}
 }

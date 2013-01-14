@@ -1,8 +1,8 @@
-<?php $THISPAGE='id="current"';$current='THISPAGE';?>
+<?php $specials='id="current"';$current='specials';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title><!--TITLE--> | Bel Sogno | Your Online Wedding Planner | Catering &amp; Party Rentals for the Greater Los Angeles Area</title>
+	<title>Monthly Specials at Bel Sogno | Bel Sogno | Your Online Wedding Planner | Catering &amp; Party Rentals for the Greater Los Angeles Area</title>
 	<?php include 'includes/css.php';?>
 </head>
 
@@ -15,7 +15,8 @@
 			<?php include 'includes/breadcrumbs.php'; ?>
 
 			<div class="content">
-				<!--CONTENT GOES HERE-->
+				<h2>Monthly Specials</h2>
+				<a href="javascript:window.print();"><img src="images/slides/3.jpg" alt="Monthly Catering Special" /></a>
 			</div>
 
 			<?php include 'includes/aside.php'; ?>	

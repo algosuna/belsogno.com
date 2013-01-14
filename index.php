@@ -1,13 +1,32 @@
-<?php $home='id="current"';$current='home';?>
+<?php
+require 'db/validate.php';
+$home='id="current"';
+$current='home';
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Home | Bel Sogno | Your Online Wedding Planner | Catering &amp; Party Rentals for the Greater Los Angeles Area</title>
 	<?php include 'includes/css.php';?>
 	<?php include 'includes/anythingslider.php';?>
+	<script type="text/javascript">
+	function fieldCheck(){
+		var name=document.getElementById("name").value;
+		var email=document.getElementById("email").value;
+		var message=document.getElementById("message").innerHTML;
+		if(name==""){
+			document.getElementById("name").focus();
+		}else if(email==""){
+			document.getElementById("email").focus();
+		}else if(email.indexOf("@")==-1){
+			document.getElementById("email").value="";
+			document.getElementById("email").focus();
+		}
+	}
+	</script>
 </head>
 
-<body>
+<body onload="fieldCheck();">
 	<div class="wrapper">
 
 		<?php include 'includes/header.php';?>
@@ -17,34 +36,49 @@
 			<!--ANYTHING SLIDER-->
 			<div class="slides pull-left shadow polaroid">
 				<ul id="slider">
+					<li><a href="specials.php"><img src="images/slides/3.jpg" alt="Catering Special"></a></li>
 					<li><img src="images/slides/1.jpg" alt="Honeymoon Ideas"></li>
 					<li><img src="images/slides/2.jpg" alt="Catering Services"></li>
 				</ul>
-				<!--
-				<ul id="reviews">
-					<li>Some review here</li>
-					<li>Some other review here</li>
-				</ul>
-				-->
 			</div>
 
 			<div class="contact-form dark shadow">
-				<form>
-					<legend><small>Questions about our services?</small><br />Contact Us!</legend>
-					<label>Name:</label>
-					<input type="text" class="shadow-inset" />
+				<?php 
+				if($valid==true){
+					if($mail_sent==1){
+						echo $success;
+					}else{
+						echo $db_error;
+					}
+				}else{ ?>
+					<form action="index.php" method="post">
+						<legend><small>Questions about our services?</small><br />Contact Us!</legend>
 
-					<label>Phone:</label>
-					<input type="text" class="shadow-inset" />
+						<label class="pull-left first">Name: <sup class="red">*</sup></label>
+						<input type="text" class="shadow-inset" name="name" id="name" value="<?php if($valid==false)echo $name;?>" />
+						<?php if($valid===false AND strlen($name)==0)echo $blank_error;?>
 
-					<label>Email:</label>
-					<input type="text" class="shadow-inset" />
+						<label class="pull-left">Phone:</label>
+						<input type="text" class="shadow-inset" name="phone" id="phone" value="<?php if($valid==false)echo $phone;?>" />
+						
 
-					<label>Message:</label>
-					<textarea class="shadow-inset"></textarea>
+						<label class="pull-left">Email: <sup class="red">*</sup></label>
+						<input type="text" class="shadow-inset" name="email" id="email" value="<?php if ($valid==false)echo $email;?>" />
+						<?php
+						if($valid===false AND strlen($email)==0){
+							echo $blank_error;
+						}elseif(check_email_address($email)==false){
+							echo $email_error;
+						}?>
 
-					<button type="submit" class="btn btn-green clear">Send!</button>
-				</form>
+						<label class="pull-left">Message: <sup class="red">*</sup></label>
+						<textarea class="shadow-inset" name="message" id="message"><?php echo $preset_message;if($valid==false)echo $message ?></textarea>
+						<?php if($valid===false AND strlen($message)==0)echo $blank_error;?>
+
+						<button type="submit" class="btn btn-green clear">Send!</button>
+						<input type="hidden" name="did_send" value="true" />
+					</form>
+				<?php } ?>
 			</div>
 
 			<div class="quick-links">
