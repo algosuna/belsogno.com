@@ -7,7 +7,7 @@ based on work by Remy Sharp: http://jqueryfordesigners.com/
 
 #slider {
 	width: 600px;
-	height: 335px;
+	height: 337px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
 	overflow-y: auto;

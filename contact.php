@@ -1,4 +1,8 @@
-<?php require 'db/validate.php'; $contact='id="current"';$current='contact'?>
+<?php
+require 'db/validate.php';
+$contact='id="current"';
+$current='contact';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,9 +20,11 @@
 
 			<div class="content">
 
+				<h2>Contact Us! <small>Question about our services?</small></h2>
+
 				<div class="well shadow">
 					<form action="" method="post" class="contact" name="contact">
-						<legend><small>Fields marked with <sup class="red">*</sup> are required</small></legend>
+						<legend>Fields marked with <sup class="red">*</sup> are required</legend>
 						<label>Name:</label>
 						<input type="text" class="shadow-inset" />
 
