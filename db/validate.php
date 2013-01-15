@@ -1,5 +1,6 @@
 <?php
-require_once('functions.php');
+require 'db_config.php';
+require_once 'functions.php' ;
 
   ///////////////////
  //////CONTACT//////

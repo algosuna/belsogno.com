@@ -19,7 +19,8 @@ $current='home';
 		}else if(email==""){
 			document.getElementById("email").focus();
 		}else if(email.indexOf("@")==-1){
-			document.getElementById("email").value="";
+			document.getElementById("email").focus();
+		}}else if(email.indexOf(".")==-1){
 			document.getElementById("email").focus();
 		}
 	}
