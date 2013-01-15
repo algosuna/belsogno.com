@@ -8,25 +8,25 @@
 					<li><a href="rentals.php">Rentals</a></li>
 				</ul>
 			</li>
+			<li><a href="vendors.php">Local Vendors</a></li>
+			<li><a href="ideas.php">Wedding Ideas</a></li>
+			<!--
 			<li><a href="">Planner</a>
 				<ul>
 					<li><a href="">Log In</a></li>
 					<li><a href="">Sign Up</a></li>
 				</ul>
 			</li>
+			-->
 		</ul>
 		<ul class="pull-left">
-			<li><a href="">Local Vendors</a></li>
-			<li><a href="">Wedding Ideas</a>
-				<ul>
-					<li><a href="">Gallery</a></li>
-				</ul>
-			</li>
 			<li><a href="index.php">Bel Sogno</a>
 				<ul>
-					<li><a href="">About</a></li>
+					<li><a href="about.php">About</a></li>
 					<li><a href="contact.php">Contact</a></li>
 					<li><a href="services.php">Contract</a></li>
+					<li><a href="sitemap.php">Sitemap</a></li>
+					<li><a href="privacy.php">Privacy Policy</a></li>
 				</ul>
 			</li>
 		</ul>

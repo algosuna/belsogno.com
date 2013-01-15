@@ -66,6 +66,17 @@ BREADCRUMBS
 ASIDE
 
 */
+aside h3,aside h4{
+	text-transform:uppercase;
+	font-weight:bold;
+}
+aside ul li{
+	margin-left:15px;
+	list-style:none;
+}
+aside .spacing{
+	margin:10px 0;
+}
 
 /*
 
@@ -217,6 +228,18 @@ CONTENT STYLES
 .contact .help-label{
 	display:block;
 	margin-left:100px;
+}
+/*TOS PAGE*/
+#privacy .content ol li,
+#privacy .content ul li{
+	margin:10px 0 10px 15px;
+}
+#privacy .content ol li ol li{
+	margin:10px 0 10px 30px;
+}
+#sitemap .content ul li{
+	margin-left:40px;
+	list-style:none;
 }
 /*
 

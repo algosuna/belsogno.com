@@ -36,7 +36,7 @@ $current='home';
 			<!--ANYTHING SLIDER-->
 			<div class="slides pull-left shadow polaroid">
 				<ul id="slider">
-					<li><a href="specials.php"><img src="images/slides/3.jpg" alt="Catering Special"></a></li>
+					<!--<li><a href="specials.php"><img src="images/slides/3.jpg" alt="Catering Special"></a></li>-->
 					<li><img src="images/slides/1.jpg" alt="Honeymoon Ideas"></li>
 					<li><img src="images/slides/2.jpg" alt="Catering Services"></li>
 				</ul>
@@ -91,7 +91,7 @@ $current='home';
 							Until January 31st, receive an additional 10% off chairs when presenting the print ad!
 						</figcaption>
 					</figure>
-					<button class="btn btn-lblue">View Ad</button>
+					<a href="specials.php"><button class="btn btn-lblue">View Ad</button></a>
 				</div>
 				
 				<div class="link pull-left">
@@ -102,7 +102,7 @@ $current='home';
 							Looking for the best honeymoon? Learn everything you need to know for the most memorable honeymoon. From weather to packing ckecklist!
 						</figcaption>
 					</figure>
-					<button class="btn btn-lblue">View Article</button>
+					<a href="ideas.php"><button class="btn btn-lblue">View Page</button></a>
 				</div>
 				
 				<div class="link pull-right">
@@ -114,7 +114,7 @@ $current='home';
 				
 						</figcaption>
 					</figure>
-					<button class="btn btn-lblue">View List</button>
+					<a href=""><button class="btn btn-lblue">View List</button></a>
 				</div>
 
 			</div>
