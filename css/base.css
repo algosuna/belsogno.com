@@ -17,6 +17,7 @@ body{
   font-size:16px;
   text-shadow:1px 1px 1px #ffffff;
   filter:dropshadow(color=#ffffff, offx=1, offy=1);
+  line-height:18px;
 }
 h1,h2,h3,h4,h5,h6{
   color:#5e5e5e;
