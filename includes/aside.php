@@ -8,14 +8,11 @@
 
 	<div class="spacing"></div>
 
-	<?php if($current=="contact"){?>
+	<?php if($current=="contact"||$current=="vendors"){?>
 	<h4>Gift Registries</h4>
-	<img src="http://www.xoedge.com/tk/hp/registry_logo_macys.gif"/>
-	<img src="http://www.xoedge.com/tk/hp/registry_logo_target.gif"/>
-	<img src="http://scmedia.theknot.com/~/media/5DFBCEECE47047608768CCECD2A30CA3.ashx"/>
-	<img src="http://www.xoedge.com/tk/hp/registry_logo_PB.gif"/>
-	<img src="http://www.xoedge.com/tk/hp/registry_logo_CB.gif"/>
-	<img src="http://www.xoedge.com/tk/hp/registry_logo_kohls.gif"/>
+	<a href="http://www.mywedding.com/registries" target="_blank"><img src="http://s0.2mdn.net/viewad/3879518/registry-slider-2-300x250.jpg" width="300" height="250" alt="Gift Registries" title="Ad" /></a>
+
+	<a href="http://www.pacificeventlighting.com/" target="_blank"><img src="http://weddingwire.advertserve.com/servlet/files/1415" width="300" height="250" alt="Pacific Event Lighting" title="Featured Vendor" /></a>
 
 	<?php }elseif($current=="about"||$current=="locals"||$current=="ideas"){?>
 	<h4>Wedding Locations</h4>
@@ -33,6 +30,6 @@
 
 	<div class="spacing"></div>
 
-	<a href="http://www.maggiesottero.com/" target="_blank"><img src="http://s0.2mdn.net/viewad/2955595/300x250-11023_MS.jpg" alt="Maggie Sottero" /></a>
+	<a href="http://www.maggiesottero.com/" target="_blank"><img src="http://s0.2mdn.net/viewad/2955595/300x250-11023_MS.jpg" width="300" height="250" alt="Maggie Sottero" title="Featured Vendor" /></a>
 
 </aside>

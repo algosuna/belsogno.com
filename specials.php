@@ -16,6 +16,7 @@
 
 			<div class="content">
 				<h2>Monthly Specials</h2>
+				<p>Please click one of the below special to print it and take it with you next time you visit us!</p>
 				<a href="javascript:window.print();"><img src="images/slides/3.jpg" alt="Monthly Catering Special" /></a>
 			</div>
 

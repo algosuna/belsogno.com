@@ -199,6 +199,31 @@ CONTENT STYLES
 #about figure.first-of-row{
 	margin-left:0px;
 }
+#about figure figcaption{
+	margin-left:5px;
+}
+/*TOOLS PAGE*/
+#tools .content img{
+	margin-left:30%;
+}
+/*VENDORS PAGE*/
+#vendors .content ul li{
+	font-size:18px;
+	list-style:none;
+	margin-top:10px;
+}
+#vendors .content ul li ul{
+	margin-left:20px;
+}
+#vendors .content ul li ul li{
+	font-size:16px;
+	margin:0;
+	line-height:18px;
+}
+#vendors .content h3{
+	color:#73dbe6;
+	font-weight:bold;
+}
 /*CONTACT PAGE*/
 .contact{
 	padding-left:40px;
